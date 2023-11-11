@@ -1,0 +1,303 @@
+/* Style pour page Connexion */
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url("https://st2.depositphotos.com/4590583/46567/i/1600/depositphotos_465677726-stock-photo-organic-vegan-food-fresh-vegetables.jpg");
+    background-size: cover;
+    font-family: Comic Sans MS;
+    flex-wrap: wrap;
+}
+
+#nav {
+    width: 100%;
+    height: auto;
+    background-color: #283618;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#nav h1 {
+    font-size: calc(0.5rem + 3vw);
+    color: #F0EFEB;
+    margin: 30px auto auto 10px;
+}
+
+.nav-link {
+    width: auto;
+    display: flex;
+    margin-top: 110px;
+    margin-right: 40px;
+    font-size: larger;
+    margin-bottom: 15px;
+}
+
+.nav-link ul li {
+    display: inline;
+    padding: 20px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #F0EFEB;
+}
+
+.nav-link a:hover {
+    color: #B7B7A4;
+    font-weight: bolder;
+}
+/* Formulaire */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    margin-top: 50vh;
+    transform: translateY(-40%);
+    border: solid 2px #F0EFEB;
+    border-radius: 25px;
+    box-shadow: 2px 2px 15px 5px; 
+    background-color: #b7b7a4;
+}
+
+.container a {
+    text-decoration: none;
+    color: #283618;
+    margin-top: 20px;
+}
+
+.container a:hover {
+    color: #F0EFEB;
+    font-weight: bolder;
+}
+
+.form {
+    width: 90%;
+}
+
+.form input {
+   width: 100%;
+   margin: 25px auto 25px auto;
+   border: solid 3px #283618;
+   border-radius: 10px;
+   background-color: #B7B7A4;
+   height: 25px;
+}
+
+.form input::placeholder {
+    color: #F0EFEB;
+}
+
+.form input:focus {
+    background-color: #D4D4D4;
+}
+
+.form button {
+    height: 40px;
+    background-color: #283618;
+    font-family: Comic Sans MS;
+    color: #B7B7A4;
+    margin: 20px auto 15px 140px;
+    border: solid 3px #B7B7A4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    color: #F0EFEB;
+    border: solid 3px #F0EFEB;
+}
+/* footer */
+.footer {
+    background-color: #283618;
+    width: auto;
+    height: auto;
+    color: #F0EFEB;
+    text-align: center;
+}
+
+.footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 75px;
+}
+
+.footer ul li {
+    margin: 0px 5px 0px 5px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #F0EFEB;
+    font-size: large;
+}
+
+.footer a:hover {
+    cursor: pointer;
+    color: #B7B7A4;
+    font-weight: bolder;
+}
+
+.footer p {
+    padding: 75px 0px 15px 0px;
+    font-size: small;
+}
+/* logo instagram */
+.gg-instagram {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px
+   }
+   
+   .gg-instagram::after,
+   .gg-instagram::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+   }
+   
+   .gg-instagram::after {
+    border: 2px solid;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 3px
+   }
+   
+   .gg-instagram::before {
+    border-radius: 3px;
+    width: 2px;
+    height: 2px;
+    background: currentColor;
+    right: 1px;
+    top: 1px
+   } 
+/* logo facebook */
+.gg-facebook {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 20px
+   }
+
+   .gg-facebook::after,
+   .gg-facebook::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box
+   }
+   
+   .gg-facebook::before {
+    width: 8px;
+    height: 20px;
+    border-left: 4px solid;
+    border-top: 4px solid;
+    border-top-left-radius: 5px;
+    left: 6px
+   }
+   
+   .gg-facebook::after {
+    width: 10px;
+    height: 4px;
+    background: currentColor;
+    top: 7px;
+    left: 4px;
+    transform: skew(-5deg)
+   }
+/* logo twitter/X  */
+.gg-twitter {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 20px
+   }
+   
+   .gg-twitter::after,
+   .gg-twitter::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    left: 4px
+   }
+   
+   .gg-twitter::before {
+    width: 9px;
+    height: 14px;
+    border-left: 4px solid;
+    border-bottom: 4px solid;
+    border-bottom-left-radius: 6px;
+    background:
+    linear-gradient(
+    to left,currentColor 12px,transparent 0)
+    no-repeat center 2px/10px 4px;
+    top: 4px
+   }
+   
+   .gg-twitter::after {
+    width: 4px;
+    height: 4px;
+    background: currentColor;
+    border-radius: 20px;
+    top: 2px;
+    box-shadow: 7px 4px 0,7px 12px 0
+   }
+/* RESPONSIVE */
+@media screen and (max-width: 650px) {
+    #nav img {
+        width: 100px;
+        height: 100px;
+        margin-left: 30px;
+    }
+
+    #nav-link {
+        position: relative;
+        left: -100%;
+        width: 100%;
+    }
+
+    #nav-link ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav-link ul li {
+        display: flex;
+        text-align: center;
+    }
+
+    #icons {
+        display: block;
+    }
+
+    #icons::before {
+        content: "\2630";
+    }
+
+    .active #icons::before {
+        content: "\2715";
+    }
+
+    .active #nav-link {
+        left: 0;
+    }
+}
