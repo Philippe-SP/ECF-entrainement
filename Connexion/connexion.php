@@ -19,9 +19,9 @@
         </div>
     </div>
     <div class="container">
-        <form class="form">
-            <input type="email" placeholder="Adresse mail" required>
-            <input type="password" placeholder="Mot de passe" required>
+        <form class="form" action="../DBconnexion.php" method="POST">
+            <input type="text" placeholder="Adresse mail" name="email" required>
+            <input type="password" placeholder="Mot de passe" name="password" required>
             <button type="submit" id="connexion">Connexion</button>
         </form>
         <a href="Inscription.html">S'inscrire</a>

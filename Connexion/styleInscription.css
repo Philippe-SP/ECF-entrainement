@@ -54,7 +54,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 400px;
-    height: 600px;
+    height: auto;
     margin: auto;
     margin-top: 50vh;
     transform: translateY(-40%);

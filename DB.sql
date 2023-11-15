@@ -2,10 +2,12 @@ CREATE DATABASE sandrineNutrition
 
 CREATE TABLE clients 
 (
-    id INT NOT NULL PRIMARY KEY,
+    id CHAR(36) NOT NULL PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
     prenom VARCHAR(50) NOT NULL,
-    allergie VARCHAR(50) NOT NULL
+    allergie VARCHAR(50) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    motDePasse VARCHAR(60) NOT NULL
 )
 
 CREATE TABLE admin
@@ -28,3 +30,6 @@ CREATE TABLE recettes
     allergene VARCHAR(150),
     regime VARCHAR(150)
 )
+
+INSERT INTO clients VALUES (UUID(), 'Dupont', 'Jean', 'Gluten', 'jeanDupont@mail.com', SHA1('Jdupont'))
+INSERT INTO clients VALUES (UUID(), 'Doe', 'John', 'lactose', 'johnDoe@mail.com', SHA1('Jdoe'))
