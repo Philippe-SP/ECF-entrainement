@@ -19,11 +19,26 @@
         </div>
     </div>
     <div class="container">
-        <form class="form" action="../DBconnexion.php" method="POST">
-            <input type="email" placeholder="Adresse mail" required>
-            <input type="text" placeholder="Nom" required>
-            <input type="text" placeholder="Prenom" required>
-            <input type="password" placeholder="Mot de passe" required>
+        <form class="form" action="../DBinscription.php" method="POST">
+            <input type="email" placeholder="Adresse mail" name="email" required>
+            <input type="text" placeholder="Nom" name="nom" required>
+            <input type="text" placeholder="Prenom" name="prenom" required>
+            <input type="password" placeholder="Mot de passe" name="password" required>
+            <h3>allergenes</h3>
+            <div class="allergenes">
+                <div>
+                    <input type="radio" name="allergene" value="gluten" required>
+                    <label for="gluten">Gluten</label>
+                </div>
+                <div>
+                    <input type="radio" name="allergene" value=lactose">
+                    <label for="lactose">lactose</label>
+                </div>
+                <div>
+                    <input type="radio" name="allergene" value="arachides">
+                    <label for="arachides">Arachides</label>
+                </div>
+            </div>
             <button type="submit" id="inscription">S'inscrire</button>
         </form>
         <a href="Inscription.html">Déja inscrit ? Se connecter.</a>

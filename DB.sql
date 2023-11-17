@@ -33,3 +33,4 @@ CREATE TABLE recettes
 
 INSERT INTO clients VALUES (UUID(), 'Dupont', 'Jean', 'Gluten', 'jeanDupont@mail.com', SHA1('Jdupont'))
 INSERT INTO clients VALUES (UUID(), 'Doe', 'John', 'lactose', 'johnDoe@mail.com', SHA1('Jdoe'))
+-- utilisateur "David Suarez" créé via le formulaire d'inscription

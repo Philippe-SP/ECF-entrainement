@@ -11,8 +11,7 @@ try{
     $formPassword = $_POST['password'];
     $mdp = hash('SHA1', $formPassword);
     //Récupération des utilisateurs
-    $query = "SELECT * FROM clients WHERE email = :email";
-    $stmt = $pdo->prepare($query);
+    $stmt = $pdo->prepare("SELECT * FROM clients WHERE email = :email");
     $stmt->bindParam(':email', $formEmail);
     $stmt->execute();
     // vérification de si l'email existe dans la bdd et si le mdp ets le bon
