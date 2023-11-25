@@ -12,13 +12,13 @@
         <h1>Sandrine nutrition</h1>
         <div id="nav-link">
             <ul>
-                <li><a href="Home.html">Accueil</a></li>
-                <li><a href="recettes.html">Recettes</a></li>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="../Recettes/recettes.php">Recettes</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
         <div class="connexion">
-            <a href="../Connexion/connexion.html">Connexion</a>
+            <a href="../Connexion/connexion.php">Connexion</a>
             <div id="icons"></div>
         </div>
     </div>
@@ -43,11 +43,11 @@
     </div>
     <div class="footer">
         <ul>
-            <li><a href="Home.html">Acceuil</a></li>
-            <li><a href="recettes.html">Recettes</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="mentionLegale.html">Mentions légales</a></li>
-            <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+            <li><a href="index.php">Acceuil</a></li>
+            <li><a href="../Recettes/recettes.php">Recettes</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="mentionLegale.php">Mentions légales</a></li>
+            <li><a href="confidentialite.php">Politique de confidentialité</a></li>
         </ul>
         <ul>
             <li><a href="#" class="gg-instagram"></a></li>

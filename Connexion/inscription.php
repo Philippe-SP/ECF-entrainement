@@ -12,9 +12,9 @@
         <h1>Sandrine nutrition</h1>
         <div class="nav-link">
             <ul>
-                <li><a href="../Accueil/Home.html">Accueil</a></li>
-                <li><a href="../Accueil/recettes.html">Recettes</a></li>
-                <li><a href="../Accueil/contact.html">Contact</a></li>
+                <li><a href="../Accueil/index.php">Accueil</a></li>
+                <li><a href="../Recettes/recettes.php">Recettes</a></li>
+                <li><a href="../Accueil/contact.php">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -45,11 +45,11 @@
     </div>
     <div class="footer">
         <ul>
-            <li><a href="../Accueil/Home.html">Acceuil</a></li>
-            <li><a href="../Accueil/recettes.html">Recettes</a></li>
-            <li><a href="../Accueil/contact.html">Contact</a></li>
-            <li><a href="../Accueil/mentionLegale.html">Mentions légales</a></li>
-            <li><a href="../Accueil/confidentialite.html">Politique de confidentialité</a></li>
+            <li><a href="../Accueil/index.php">Acceuil</a></li>
+            <li><a href="../Recettes/recettes.php">Recettes</a></li>
+            <li><a href="../Accueil/contact.php">Contact</a></li>
+            <li><a href="../Accueil/mentionLegale.php">Mentions légales</a></li>
+            <li><a href="../Accueil/confidentialite.php">Politique de confidentialité</a></li>
         </ul>
         <ul>
             <li><a href="#" class="gg-instagram"></a></li>
