@@ -12,13 +12,15 @@ try {
     $formPrenom = $_POST['prenom'];
     $formPassword = $_POST['password'];
     $formAllergene = $_POST['allergene'];
+    // Hash du mot de passe
+    $hashedPassword = password_hash($formPassword, PASSWORD_DEFAULT);
     // Création d'un utilisateur
     $stmt = $pdo->prepare('INSERT INTO clients(id, email, nom, prenom, allergie, motDePasse) VALUES (UUID(), :email, :nom, :prenom, :allergene, :password)');
-    $stmt->bindValue(':email', $formEmail);
-    $stmt->bindValue(':nom', $formNom);
-    $stmt->bindValue(':prenom', $formPrenom);
-    $stmt->bindValue(':password', hash('SHA1', $formPassword));
-    $stmt->bindValue(':allergene', $formAllergene);
+    $stmt->bindParam(':email', $formEmail);
+    $stmt->bindParam(':nom', $formNom);
+    $stmt->bindParam(':prenom', $formPrenom);
+    $stmt->bindParam(':password', $hashedPassword);
+    $stmt->bindParam(':allergene', $formAllergene);
     if ($stmt->execute()) {
         header('location: http://localhost/ECF-entrainement/Connexion/connexion.php');
         exit();

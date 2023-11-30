@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="nav">
-        <img src="https://sandrine-coupart.online/img/logo.png" width="140px" height="140px">
+        <img src="../logo.png" width="140px" height="140px">
         <h1>Sandrine nutrition</h1>
         <div class="nav-link">
             <ul>

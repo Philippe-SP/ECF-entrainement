@@ -49,6 +49,11 @@ body {
     font-weight: bolder;
 }
 
+.nomUser {
+    margin-top: 25px;
+    color: #F0EFEB;
+}
+
 .connexion {
     margin: 40px 10px 0px 0px;
     width: auto;
