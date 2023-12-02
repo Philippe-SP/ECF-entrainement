@@ -31,7 +31,7 @@
                     <label for="gluten">Gluten</label>
                 </div>
                 <div>
-                    <input type="radio" name="allergene" value=lactose">
+                    <input type="radio" name="allergene" value="lactose">
                     <label for="lactose">lactose</label>
                 </div>
                 <div>
@@ -41,7 +41,7 @@
             </div>
             <button type="submit" id="inscription">S'inscrire</button>
         </form>
-        <a href="Inscription.html">Déja inscrit ? Se connecter.</a>
+        <a href="connexion.php">Déja inscrit ? Se connecter.</a>
     </div>
     <div class="footer">
         <ul>

@@ -11,7 +11,7 @@ if (isset($_POST['connexion'])) {
         $formEmail = $_POST['email'];
         $formPassword = $_POST['password'];
         //Récupération des utilisateurs
-        $stmt = $pdo->prepare("SELECT * FROM clients WHERE email = :email");
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
         $stmt->bindParam(':email', $formEmail);
         $stmt->execute();
         // vérification de si l'email existe dans la bdd et si le mdp est le bon
@@ -23,7 +23,7 @@ if (isset($_POST['connexion'])) {
                 $_SESSION['prenom'] = $user['prenom'];
             }else {
                 echo 'mot de passe incorrect.';
-            }
+            };
         }else {
             echo 'Utilisateur introuvable, vérifiez votre email.';
         }
@@ -57,7 +57,6 @@ if (isset($_POST['connexion'])) {
                 <a href="../Connexion/connexion.php">Connexion</a>
             </div>
         <?php else: ?>
-            <h3 class="nomUser"><?php echo "Bienvenue ".$user['prenom']." ".$user['nom']; ?></h3>
             <div class="connexion">
                 <a href="../Connexion/connexion.php">Déconnexion</a>
             </div>

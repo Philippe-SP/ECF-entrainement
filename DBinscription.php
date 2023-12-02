@@ -15,7 +15,7 @@ try {
     // Hash du mot de passe
     $hashedPassword = password_hash($formPassword, PASSWORD_DEFAULT);
     // Création d'un utilisateur
-    $stmt = $pdo->prepare('INSERT INTO clients(id, email, nom, prenom, allergie, motDePasse) VALUES (UUID(), :email, :nom, :prenom, :allergene, :password)');
+    $stmt = $pdo->prepare('INSERT INTO users(id, email, nom, prenom, allergie, motDePasse) VALUES (UUID(), :email, :nom, :prenom, :allergene, :password)');
     $stmt->bindParam(':email', $formEmail);
     $stmt->bindParam(':nom', $formNom);
     $stmt->bindParam(':prenom', $formPrenom);
@@ -28,5 +28,5 @@ try {
         echo "Impossible de créer l'utilisateur";
     }
 } catch (PDOException $e){
-    echo "Erreur lors de la création de l'utilisateur";
-}
+    echo "Erreur lors de la création de l'utilisateur: ". $e->getMessage();
+};
