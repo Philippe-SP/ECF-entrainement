@@ -18,9 +18,14 @@ if (isset($_POST['connexion'])) {
         if($stmt->rowCount() == 1){
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
             if(password_verify($formPassword, $user['motDePasse'])){
+                $stmtRole = $pdo->prepare("SELECT * FROM roles_users WHERE user_id = :id");
+                $stmtRole->bindValue(':id', $user['id']);
+                $stmtRole->execute();
+                $role = $stmtRole->fetch(PDO::FETCH_ASSOC);
                 session_start();
                 $_SESSION['nom'] = $user['nom'];
                 $_SESSION['prenom'] = $user['prenom'];
+                $_SESSION['role'] = $role['role_id'];
             }else {
                 echo 'mot de passe incorrect.';
             };
@@ -50,6 +55,9 @@ if (isset($_POST['connexion'])) {
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="../Recettes/recettes.php">Recettes</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <?php if(isset($_SESSION) && $_SESSION['role'] === 2): ?>
+                    <li><a href="admin.php">Admin</a></li>
+                <?php endif; ?>
             </ul>
         </div>
         <?php if(!isset($_SESSION)): ?>

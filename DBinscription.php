@@ -22,6 +22,13 @@ try {
     $stmt->bindParam(':password', $hashedPassword);
     $stmt->bindParam(':allergene', $formAllergene);
     if ($stmt->execute()) {
+        $stmtUser = $pdo->prepare('SELECT * FROM users WHERE email = :email');
+        $stmtUser->bindValue(':email', $formEmail);
+        $stmtUser->execute();
+        $user = $stmtUser->fetch(PDO::FETCH_ASSOC);
+        $stmtRole = $pdo->prepare('INSERT INTO roles_users(user_id, role_id) VALUES (:id, 1)');
+        $stmtRole->bindValue(':id', $user['id']);
+        $stmtRole->execute();
         header('location: http://localhost/ECF-entrainement/Connexion/connexion.php');
         exit();
     } else {

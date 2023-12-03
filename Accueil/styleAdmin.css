@@ -1,0 +1,335 @@
+/* dark green-gray #283618, light gray-green #B7B7A4, soft gray #D4D4D4, off-white #F0EFEB */
+* {
+    margin: 0;
+}
+
+body {
+    background-image: url("https://st2.depositphotos.com/4590583/46567/i/1600/depositphotos_465677726-stock-photo-organic-vegan-food-fresh-vegetables.jpg");
+    background-size: cover;
+    font-family: Comic Sans MS;
+}
+/* navigation*/
+#nav {
+    width: 100%;
+    height: auto;
+    background-color: #283618;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#nav h1 {
+    font-size: calc(0.5rem + 3vw);
+    color: #F0EFEB;
+    margin-top: 30px;
+}
+
+#nav-link {
+    width: auto;
+    display: flex;
+    margin-top: 110px;
+    margin-right: 40px;
+    font-size: larger;
+    margin-bottom: 15px;
+}
+
+#nav-link ul li {
+    display: inline;
+    padding: 20px;
+}
+
+#nav-link a {
+    text-decoration: none;
+    color: #F0EFEB;
+}
+
+#nav-link a:hover {
+    color: #B7B7A4;
+    font-weight: bolder;
+}
+
+#icons {
+    cursor: pointer;
+    display: none;
+    color: #F0EFEB;
+    margin: 10px 5px 5px 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 35px;
+}
+
+#icons:hover {
+    color: #B7B7A4;
+    font-weight: bolder;
+}
+/*contenu*/
+.header {
+    display: flex;
+    margin-top: 300px;
+    background-color: #D4D4D4;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    color: #283618;
+}
+
+.admin {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin h1 {
+    text-align: center;
+    padding-bottom: 25px;
+    font-size: calc(1.5rem + 4vw);
+}
+
+.admin form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px auto 25px auto;
+    align-items: center;
+}
+
+.admin form label {
+    text-align: center;
+}
+
+.admin form input, .admin form textarea {
+    width: 50%;
+    height: 25px;
+    margin: 15px auto 15px auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #B7B7A4;
+    color: #F0EFEB;
+    font-family: Comic sans MS;
+}
+
+.admin form input:focus, .admin form textarea:focus {
+    background-color: #283618;
+}
+
+::-webkit-file-upload-button {
+    background-color: #283618;
+    color: #F0EFEB;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #F0EFEB;
+    font-family: Comic sans MS;
+    padding-left: 5px;
+}
+
+.admin form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.admin form button {
+    border: none;
+    border-radius: 10px;
+    background-color: #283618;
+    width: 10%;
+    padding: 10px;
+    color: #F0EFEB;
+    font-family: Comic sans MS;
+    cursor: pointer;
+}
+/* footer */
+.footer {
+    background-color: #283618;
+    width: auto;
+    height: auto;
+    color: #F0EFEB;
+    text-align: center;
+}
+
+.footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 75px;
+}
+
+.footer ul li {
+    margin: 0px 5px 0px 5px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #F0EFEB;
+    font-size: large;
+}
+
+.footer a:hover {
+    cursor: pointer;
+    color: #B7B7A4;
+    font-weight: bolder;
+}
+
+.footer p {
+    padding: 75px 0px 15px 0px;
+    font-size: small;
+}
+
+/* logo instagram */
+.gg-instagram {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px
+   }
+   
+   .gg-instagram::after,
+   .gg-instagram::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+   }
+   
+   .gg-instagram::after {
+    border: 2px solid;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 3px
+   }
+   
+   .gg-instagram::before {
+    border-radius: 3px;
+    width: 2px;
+    height: 2px;
+    background: currentColor;
+    right: 1px;
+    top: 1px
+   } 
+/* logo facebook */
+.gg-facebook {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 20px
+   }
+
+   .gg-facebook::after,
+   .gg-facebook::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box
+   }
+   
+   .gg-facebook::before {
+    width: 8px;
+    height: 20px;
+    border-left: 4px solid;
+    border-top: 4px solid;
+    border-top-left-radius: 5px;
+    left: 6px
+   }
+   
+   .gg-facebook::after {
+    width: 10px;
+    height: 4px;
+    background: currentColor;
+    top: 7px;
+    left: 4px;
+    transform: skew(-5deg)
+   }
+/* logo twitter/X  */
+.gg-twitter {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 20px
+   }
+   
+   .gg-twitter::after,
+   .gg-twitter::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    left: 4px
+   }
+   
+   .gg-twitter::before {
+    width: 9px;
+    height: 14px;
+    border-left: 4px solid;
+    border-bottom: 4px solid;
+    border-bottom-left-radius: 6px;
+    background:
+    linear-gradient(
+    to left,currentColor 12px,transparent 0)
+    no-repeat center 2px/10px 4px;
+    top: 4px
+   }
+   
+   .gg-twitter::after {
+    width: 4px;
+    height: 4px;
+    background: currentColor;
+    border-radius: 20px;
+    top: 2px;
+    box-shadow: 7px 4px 0,7px 12px 0
+   } 
+/* RESPONSIVE */
+@media screen and (max-width: 650px) {
+    #nav img {
+        width: 100px;
+        height: 100px;
+        margin-left: 30px;
+    }
+
+    #nav-link {
+        position: relative;
+        left: -100%;
+        width: 100%;
+    }
+
+    #nav-link ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav-link ul li {
+        display: flex;
+        text-align: center;
+    }
+
+    #icons {
+        display: block;
+    }
+
+    #icons::before {
+        content: "\2630";
+    }
+
+    .active #icons::before {
+        content: "\2715";
+    }
+
+    .active #nav-link {
+        left: 0;
+    }
+}
