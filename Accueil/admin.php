@@ -25,18 +25,18 @@
         <div class="admin">
             <h1>Partie administrateur</h1>
             <h2>Créer une recette de cuisine</h2>
-            <form action="" method="POST">
+            <form action="../Recettes/recettes.php" method="POST" enctype="multipart/form-data">
                 <input type="text" name="nom" placeholder="Nom" required>
                 <textarea type="text" name="description" placeholder="Description" required></textarea>
-                <input type="text" name="tpsPreparation" placeholder="Temps de préparation" required>
-                <input type="text" name="tpsCuisson" placeholder="Temps de cuisson" required>
-                <input type="text" name="tpsRepos" placeholder="Temps de repos" required>
+                <input type="number" min="0" max="120" name="tpsPreparation" placeholder="Temps de préparation" required>
+                <input type="number" min="0" max="120" name="tpsCuisson" placeholder="Temps de cuisson" required>
+                <input type="number" min="0" max="120" name="tpsRepos" placeholder="Temps de repos" required>
                 <input type="text" name="ingredients" placeholder="Ingredients" required>
                 <input type="text" name="etapes" placeholder="Etapes" required>
                 <input type="text" name="allergenes" placeholder="Allergènes" required>
                 <input type="text" name="regime" placeholder="Regimes" required>
-                <input type="file" name="image" id="image" accept="image/jpeg, image/png" required>
-                <button type="submit" name="create">Créer</button>
+                <input type="file" name="image" accept="image/jpeg, image/png" required>
+                <button type="submit" name="create" value="upload">Créer</button>
             </form>
         </div>
     </div>

@@ -1,3 +1,22 @@
+<?php
+$dsn = 'mysql:host=localhost;dbname=sandrinenutrition';
+$username = 'root';
+
+if(isset($_POST['create'])) {
+    require_once "../Recettes/DBadmin.php";
+};
+
+try{
+    $pdo = new PDO($dsn, $username);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    $stmtRecette = $pdo->prepare('SELECT * FROM recettes');
+    $stmtRecette->execute();
+} catch(PDOException $e){
+    echo 'Erreur lors du SELECT'. $e->getMessage();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,66 +46,25 @@
     <div class="header">
         <h1>Mes recettes</h1>
         <div class="main">
+            <?php 
+            while($recette = $stmtRecette->fetch(PDO::FETCH_ASSOC)){
+            ?>
             <div class="card">
                 <div class="card-top">
-                    <img src="https://i0.wp.com/freethepickle.fr/wp-content/uploads/2022/11/Tarte-champi-comte-2-of-3.jpg?fit=800%2C1000&ssl=1">
+                    <img src="../images/<?php echo $recette['image']; ?>">
                 </div>
                 <div class="card-content">
-                    <h2>Tarte rustique aux champignons</h2>
+                    <?php echo "<h2>".$recette['nom']."</h2>"; ?>
                     <br>
-                    <p>Temps de préparation: 10min</p>
+                    <?php echo "<p>Temps de préparation: ".$recette['tpsPreparation']."min</p>"; ?>
                     <br>
-                    <p>Temps de cuisson: 45min</p>
+                    <?php echo "<p>Temps de cuisson: ".$recette['tpsCuisson']."min</p>"; ?>
                     <div class="card-bottom">
                         <button type="button" class="info-btn">Informations</button>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-top">
-                    <img src="https://couteaux-et-tirebouchons.com/wp-content/uploads/2016/09/Pates-au-citron-pasta-limone-basilic-750x500.jpg">
-                </div>
-                <div class="card-content">
-                    <h2>Pattes au citron et au poulet</h2>
-                    <br>
-                    <p>Temps de préparation: 40min</p>
-                    <br>
-                    <p>Temps de cuisson: 25min</p>
-                    <div class="card-bottom">
-                        <button type="button" class="info-btn">Informations</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-top">
-                    <img src="https://www.solo.be/fr/-/media/Project/Upfield/Brands/Solo/Solo-be/Assets/Recipes/sync-images/d2379512-5da5-46fb-b59e-ada2023a2018.jpg?rev=4163ebe5455443be956df0b6b7d4181d&w=1600">
-                </div>
-                <div class="card-content">
-                    <h2>Muffins aux carottes et à l'orange</h2>
-                    <br>
-                    <p>Temps de préparation: 30min</p>
-                    <br>
-                    <p>Temps de cuisson: 20min</p>
-                    <div class="card-bottom">
-                        <button type="button" class="info-btn">Informations</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-top">
-                    <img src="https://www.auxdelicesdupalais.net/wp-content/uploads/2022/09/salade-de-pates-6.jpg">
-                </div>
-                <div class="card-content">
-                    <h2>Salade de pattes au thon</h2>
-                    <br>
-                    <p>Temps de préparation: 15min</p>
-                    <br>
-                    <p>Temps de cuisson: 10min</p>
-                <div class="card-bottom">
-                    <button type="button" class="info-btn">Informations</button>
-                </div>
-                </div>
-            </div>
+            <?php }; ?>
         </div>
     </div>
     <!--Footer-->

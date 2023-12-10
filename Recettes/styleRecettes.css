@@ -106,12 +106,12 @@ body {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin: 15px auto 25px auto;
 }
 
 .card {
     width: 250px;
-    height: 350px;
+    height: auto;
     border: solid 2px #283618;
     border-radius: 10px;
     margin: 10px;
@@ -144,6 +144,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .card button {

@@ -36,7 +36,7 @@ INSERT INTO roles_users VALUES ('46ebcde8-906e-11ee-b101-b445068fba4d', 2);
 
 CREATE TABLE recettes
 (
-    id CHAR(36) PRIMARY KEY,
+    id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(50),
     description VARCHAR(150),
     tpsPreparation INT(120),
