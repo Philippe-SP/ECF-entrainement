@@ -22,6 +22,7 @@ if (isset($_POST['connexion'])) {
                 $stmtRole->bindValue(':id', $user['id']);
                 $stmtRole->execute();
                 $role = $stmtRole->fetch(PDO::FETCH_ASSOC);
+                session_name('user');
                 session_start();
                 $_SESSION['nom'] = $user['nom'];
                 $_SESSION['prenom'] = $user['prenom'];

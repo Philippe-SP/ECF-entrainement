@@ -7,6 +7,7 @@ body {
     background-image: url("https://st2.depositphotos.com/4590583/46567/i/1600/depositphotos_465677726-stock-photo-organic-vegan-food-fresh-vegetables.jpg");
     background-size: cover;
     font-family: Comic Sans MS;
+    width: 100%;
 }
 /* navigation*/
 #nav {
@@ -86,83 +87,57 @@ body {
 /*contenu*/
 .header {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 300px;
+    flex-direction: column;
+    margin-top: 0px;
     background-color: #D4D4D4;
     width: 100%;
     height: auto;
-    justify-content: center;
     color: #283618;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.header h1 {
-    font-size: calc(1.5rem + 4.5vw);
+    align-content: center;
+    text-align: justify;
 }
 
-.main {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 15px auto 25px auto;
-}
-
-.card {
-    width: 250px;
+.content {
+    width: 70%;
     height: auto;
-    border: solid 2px #283618;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-.card img {
-    width: 7em;
-    height: 7em;
-    border-radius: 50px;
-    margin-top: 2.5px;
-    margin-bottom: 2.5px;
-}
-
-.card-top {
-    background-color: #283618;
     display: flex;
-    justify-content: center;
-    border-radius: 10px;
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-    text-align: center;
-}
-
-.card-bottom {
-    height: 60px;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 5px;
-}
-
-.card a {
-    width: 100px;
-    height: 25px;
-    border: solid 2px #283618;
-    color: #283618;
-    border-radius: 10px;
-    background-color: #D4D4D4;
-    text-decoration: none;
-    padding: 5px;
-}
-
-.card a:hover {
-    cursor: pointer;
+    justify-content: space-around;
+    margin: 15px auto auto 15px;
     background-color: #283618;
+    border-radius: 10px;
     color: #F0EFEB;
 }
+
+.content img {
+    width: 250px;
+    height: 250px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 50px;
+}
+
+.content ul {
+    margin: 10px 10px 10px 20px;
+}
+
+.content ul li {
+    padding: 20px;
+    font-size: calc(0.5rem + 1vw);
+}
+
+.header h1, h2, p, ul {
+    margin: 5px 5px 5px 5px;
+    max-width: 80%;
+}
+
+.header h1 {
+    font-size: calc(1rem + 2vw);
+}
+
+.header h2 {
+    font-size: calc(0.5rem + 1.5vw);
+} 
 /* footer */
 .footer {
     background-color: #283618;

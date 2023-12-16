@@ -35,12 +35,21 @@ try{
                 <li><a href="../Accueil/index.php">Accueil</a></li>
                 <li><a href="recettes.php">Recettes</a></li>
                 <li><a href="../Accueil/contact.php">Contact</a></li>
+                <?php if(isset($_SESSION) && $_SESSION['role'] === 2): ?>
+                    <li><a href="admin.php">Admin</a></li>
+                <?php endif; ?>
             </ul>
         </div>
-        <div class="connexion">
-            <a href="../Connexion/connexion.html">Connexion</a>
+        <?php if(!isset($_SESSION)): ?>
+            <div class="connexion">
+                <a href="../Connexion/connexion.php">Connexion</a>
+            </div>
+        <?php else: ?>
+            <div class="connexion">
+                <a href="../Connexion/connexion.php">Déconnexion</a>
+            </div>
+        <?php endif; ?>
             <div id="icons"></div>
-        </div>
     </div>
     <!--Contenu-->
     <div class="header">
@@ -60,13 +69,14 @@ try{
                     <br>
                     <?php echo "<p>Temps de cuisson: ".$recette['tpsCuisson']."min</p>"; ?>
                     <div class="card-bottom">
-                        <button type="button" class="info-btn">Informations</button>
+                        <a id="info" href='details-recette.php?id=<?php echo $recette['id']; ?>'>Informations</a>
                     </div>
                 </div>
             </div>
             <?php }; ?>
         </div>
     </div>
+    <div id="detail"></div>
     <!--Footer-->
     <div class="footer">
         <ul>
