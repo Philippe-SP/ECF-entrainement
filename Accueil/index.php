@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $dsn = 'mysql:host=localhost;dbname=sandrinenutrition';
 $username = 'root';
@@ -22,8 +23,6 @@ if (isset($_POST['connexion'])) {
                 $stmtRole->bindValue(':id', $user['id']);
                 $stmtRole->execute();
                 $role = $stmtRole->fetch(PDO::FETCH_ASSOC);
-                session_name('user');
-                session_start();
                 $_SESSION['nom'] = $user['nom'];
                 $_SESSION['prenom'] = $user['prenom'];
                 $_SESSION['role'] = $role['role_id'];
@@ -56,18 +55,18 @@ if (isset($_POST['connexion'])) {
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="../Recettes/recettes.php">Recettes</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <?php if(isset($_SESSION) && $_SESSION['role'] === 2): ?>
+                <?php if(isset($_SESSION['nom']) && $_SESSION['role'] === 2): ?>
                     <li><a href="admin.php">Admin</a></li>
                 <?php endif; ?>
             </ul>
         </div>
-        <?php if(!isset($_SESSION)): ?>
+        <?php if(!isset($_SESSION['nom'])): ?>
             <div class="connexion">
                 <a href="../Connexion/connexion.php">Connexion</a>
             </div>
         <?php else: ?>
             <div class="connexion">
-                <a href="../Connexion/connexion.php">Déconnexion</a>
+                <a href="../Connexion/connexion.php?logout=1">Déconnexion</a>
             </div>
         <?php endif; ?>
             <div id="icons"></div>

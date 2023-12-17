@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $dsn = 'mysql:host=localhost;dbname=sandrinenutrition';
 $username = 'root';
 
@@ -35,21 +37,21 @@ try{
                 <li><a href="../Accueil/index.php">Accueil</a></li>
                 <li><a href="recettes.php">Recettes</a></li>
                 <li><a href="../Accueil/contact.php">Contact</a></li>
-                <?php if(isset($_SESSION) && $_SESSION['role'] === 2): ?>
+                <?php if(isset($_SESSION['nom']) && $_SESSION['role'] === 2): ?>
                     <li><a href="admin.php">Admin</a></li>
                 <?php endif; ?>
             </ul>
         </div>
-        <?php if(!isset($_SESSION)): ?>
-            <div class="connexion">
-                <a href="../Connexion/connexion.php">Connexion</a>
-            </div>
+        <?php if(!isset($_SESSION['nom'])):?>
+        <div class="connexion">
+            <a href="../Connexion/connexion.php">Connexion</a>
+        </div>
         <?php else: ?>
             <div class="connexion">
-                <a href="../Connexion/connexion.php">Déconnexion</a>
-            </div>
-        <?php endif; ?>
-            <div id="icons"></div>
+            <a href="../Connexion/connexion.php?logout=1">Déconnexion</a>
+        </div>
+        <?php endif; ?> 
+        <div id="icons"></div>
     </div>
     <!--Contenu-->
     <div class="header">

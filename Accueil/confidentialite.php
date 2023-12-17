@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,12 +19,21 @@
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="../Recettes/recettes.php">Recettes</a></li>
                 <li><a href="contact.php">Contact</a></li>
+                <?php if(isset($_SESSION['nom']) && $_SESSION['role'] === 2): ?>
+                    <li><a href="admin.php">Admin</a></li>
+                <?php endif; ?>
             </ul>
         </div>
+        <?php if(!isset($_SESSION['nom'])):?>
         <div class="connexion">
-            <a href="../Connexion/connexion.html">Connexion</a>
-            <div id="icons"></div>
+            <a href="../Connexion/connexion.php">Connexion</a>
         </div>
+        <?php else: ?>
+            <div class="connexion">
+            <a href="../Connexion/connexion.php?logout=1">Déconnexion</a>
+        </div>
+        <?php endif; ?> 
+        <div id="icons"></div>
     </div>
     <div class="header">
         <div class="confi">
