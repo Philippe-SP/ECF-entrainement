@@ -85,12 +85,18 @@ body {
     font-size: calc(1.5rem + 4vw);
 }
 
+.admin h2 {
+    font-size: calc(1rem + 2vw);
+}
+
 .admin form{
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 15px auto 25px auto;
     align-items: center;
+    border: solid 5px #283618;
+    border-radius: 25px;
 }
 
 .admin form label {
@@ -132,12 +138,23 @@ body {
     height: 100px;
 }
 
+.allergenes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #283618;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 .admin form button {
     border: none;
     border-radius: 10px;
     background-color: #283618;
-    width: 10%;
+    width: 110px;
     padding: 10px;
+    margin-bottom: 15px;
     color: #F0EFEB;
     font-family: Comic sans MS;
     cursor: pointer;

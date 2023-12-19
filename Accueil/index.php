@@ -24,7 +24,7 @@ if (isset($_POST['connexion'])) {
                 $stmtRole->execute();
                 $role = $stmtRole->fetch(PDO::FETCH_ASSOC);
                 $_SESSION['nom'] = $user['nom'];
-                $_SESSION['prenom'] = $user['prenom'];
+                $_SESSION['allergene'] = $user['allergie'];
                 $_SESSION['role'] = $role['role_id'];
             }else {
                 echo 'mot de passe incorrect.';
@@ -45,6 +45,7 @@ if (isset($_POST['connexion'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.Nutrition</title>
     <link rel="stylesheet" href="styleHome.css">
+    <link rel="shortcut icon" href="../logo.png">
 </head>
 <body>
     <div id="nav">
@@ -54,7 +55,7 @@ if (isset($_POST['connexion'])) {
             <ul>
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="../Recettes/recettes.php">Recettes</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>
                 <?php if(isset($_SESSION['nom']) && $_SESSION['role'] === 2): ?>
                     <li><a href="admin.php">Admin</a></li>
                 <?php endif; ?>

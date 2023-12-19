@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleInscription.css">
+    <link rel="shortcut icon" href="../logo.png">
     <title>S.Nutrition</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
                 </div>
                 <div>
                     <input type="radio" name="allergene" value="lactose">
-                    <label for="lactose">lactose</label>
+                    <label for="lactose">Lactose</label>
                 </div>
                 <div>
                     <input type="radio" name="allergene" value="arachides">

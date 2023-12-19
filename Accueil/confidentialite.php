@@ -9,6 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.Nutrition</title>
     <link rel="stylesheet" href="styleConfidentialite.css">
+    <link rel="shortcut icon" href="../logo.png">
 </head>
 <body>
     <div id="nav">

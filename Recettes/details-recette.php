@@ -27,6 +27,7 @@ try{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.Nutrition</title>
     <link rel="stylesheet" href="styleDetails.css">
+    <link rel="shortcut icon" href="../logo.png">
 </head>
 <body>
     <!--Navigation-->
@@ -39,7 +40,7 @@ try{
                 <li><a href="recettes.php">Recettes</a></li>
                 <li><a href="../Accueil/contact.php">Contact</a></li>
                 <?php if(isset($_SESSION['nom']) && $_SESSION['role'] === 2): ?>
-                    <li><a href="admin.php">Admin</a></li>
+                    <li><a href="../Accueil/admin.php">Admin</a></li>
                 <?php endif; ?>
             </ul>
         </div>
