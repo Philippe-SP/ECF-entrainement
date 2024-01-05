@@ -99,7 +99,6 @@ try{
             <?php }}}; ?>
         </div>
     </div>
-    <div id="detail"></div>
     <!--Footer-->
     <div class="footer">
         <ul>

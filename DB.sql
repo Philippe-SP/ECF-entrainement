@@ -48,3 +48,12 @@ CREATE TABLE recettes
     regime VARCHAR(150)
 );
 
+CREATE TABLE commentaires
+(
+    id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    note INT(5) NOT NULL CHECK (note > 0),
+    commentaire VARCHAR(255) NOT NULL,
+    id_recette INT(11) NOT NULL,
+    FOREIGN KEY (id_recette) REFERENCES recettes(id)
+)
+
