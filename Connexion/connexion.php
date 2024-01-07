@@ -20,14 +20,14 @@ if(isset($_GET['logout'])) {
         <h1>Sandrine nutrition</h1>
         <div class="nav-link">
             <ul>
-                <li><a href="../Accueil/index.php">Accueil</a></li>
+                <li><a href="../index.php">Accueil</a></li>
                 <li><a href="../Recettes/recettes.php">Recettes</a></li>
                 <li><a href="../Accueil/contact.php">Contact</a></li>
             </ul>
         </div>
     </div>
     <div class="container">
-        <form class="form" action="../Accueil/index.php" method="POST">
+        <form class="form" action="../index.php" method="POST">
             <input type="text" placeholder="Adresse mail" name="email" required>
             <input type="password" placeholder="Mot de passe" name="password" required>
             <button type="submit" id="connexion" name="connexion">Connexion</button>
@@ -36,7 +36,7 @@ if(isset($_GET['logout'])) {
     </div>
     <div class="footer">
         <ul>
-            <li><a href="../Accueil/index.php">Acceuil</a></li>
+            <li><a href="../index.php">Acceuil</a></li>
             <li><a href="../Recettes/recettes.php">Recettes</a></li>
             <li><a href="../Accueil/contact.php">Contact</a></li>
             <li><a href="../Accueil/mentionLegale.php">Mentions légales</a></li>

@@ -17,11 +17,11 @@ session_start();
         <h1>Sandrine nutrition</h1>
         <div id="nav-link">
             <ul>
-                <li><a href="index.php">Accueil</a></li>
+                <li><a href="../index.php">Accueil</a></li>
                 <li><a href="../Recettes/recettes.php">Recettes</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="./contact.php">Contact</a></li>
                 <?php if(isset($_SESSION['nom']) && $_SESSION['role'] === 2): ?>
-                    <li><a href="admin.php">Admin</a></li>
+                    <li><a href="./admin.php">Admin</a></li>
                 <?php endif; ?>
             </ul>
         </div>
@@ -82,11 +82,11 @@ session_start();
     </div>
     <div class="footer">
         <ul>
-            <li><a href="index.php">Acceuil</a></li>
+            <li><a href="../index.php">Acceuil</a></li>
             <li><a href="../Recettes/recettes.php">Recettes</a></li>
-            <li><a href="contact.php">Contact</a></li>
-            <li><a href="mentionLegale.php">Mentions légales</a></li>
-            <li><a href="confidentialite.php">Politique de confidentialité</a></li>
+            <li><a href="./contact.php">Contact</a></li>
+            <li><a href="./mentionLegale.php">Mentions légales</a></li>
+            <li><a href="./confidentialite.php">Politique de confidentialité</a></li>
         </ul>
         <ul>
             <li><a href="#" class="gg-instagram"></a></li>

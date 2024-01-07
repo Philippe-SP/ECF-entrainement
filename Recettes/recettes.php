@@ -1,15 +1,16 @@
 <?php
 session_start();
 
-$dsn = 'mysql:host=localhost;dbname=sandrinenutrition';
+$dsn = 'mysql:host=mysql-pinheiro-alwaysdata.net;dbname=pinheiro_sandrinenutrition';
 $username = 'root';
+$pass = '*3A9C26654911C95BA78BC99B2FBCB9470B2DFD25';
 
 if(isset($_POST['create'])) {
     require_once "../Recettes/DBadmin.php";
 };
 
 try{
-    $pdo = new PDO($dsn, $username);
+    $pdo = new PDO($dsn, $username, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //Requette pour récupérer les recettes
     $stmtRecette = $pdo->prepare('SELECT * FROM recettes');
@@ -35,8 +36,8 @@ try{
         <h1>Sandrine nutrition</h1>
         <div id="nav-link">
             <ul>
-                <li><a href="../Accueil/index.php">Accueil</a></li>
-                <li><a href="recettes.php">Recettes</a></li>
+                <li><a href="../index.php">Accueil</a></li>
+                <li><a href="./recettes.php">Recettes</a></li>
                 <li><a href="../Accueil/contact.php">Contact</a></li>
                 <?php if(isset($_SESSION['nom']) && $_SESSION['role'] === 2): ?>
                     <li><a href="../Accueil/admin.php">Admin</a></li>
@@ -102,8 +103,8 @@ try{
     <!--Footer-->
     <div class="footer">
         <ul>
-            <li><a href="../Accueil/index.php">Acceuil</a></li>
-            <li><a href="recettes.php">Recettes</a></li>
+            <li><a href="../index.php">Acceuil</a></li>
+            <li><a href="./recettes.php">Recettes</a></li>
             <li><a href="../Accueil/contact.php">Contact</a></li>
             <li><a href="../Accueil/mentionLegale.php">Mentions légales</a></li>
             <li><a href="../Accueil/confidentialite.php">Politique de confidentialité</a></li>

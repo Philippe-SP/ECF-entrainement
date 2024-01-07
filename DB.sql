@@ -57,3 +57,8 @@ CREATE TABLE commentaires
     FOREIGN KEY (id_recette) REFERENCES recettes(id)
 )
 
+--Création de l'administrateur pour le back office
+SELECT PASSWORD('AdminBDD');
+CREATE USER 'Admin_BDD'@'localhost' IDENTIFIED BY '*9F24D54F1038EE3B620D71B54D3435603ACBDEA0';
+GRANT ALL PRIVILEGES ON * . * TO 'Admin_BDD'@'localhost';
+

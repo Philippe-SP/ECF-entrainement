@@ -1,12 +1,13 @@
 <?php
 session_start();
 
-$dsn = 'mysql:host=localhost;dbname=sandrinenutrition';
+$dsn = 'mysql:host=mysql-pinheiro-alwaysdata.net;dbname=pinheiro_sandrinenutrition';
 $username = 'root';
+$pass = '*3A9C26654911C95BA78BC99B2FBCB9470B2DFD25';
 
 if (isset($_POST['connexion'])) {
     try{
-        $pdo = new PDO($dsn, $username);
+        $pdo = new PDO($dsn, $username, $pass);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //Récupération des données du formulaire de connexion
         $formEmail = $_POST['email'];
@@ -45,29 +46,29 @@ if (isset($_POST['connexion'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.Nutrition</title>
     <link rel="stylesheet" href="styleHome.css">
-    <link rel="shortcut icon" href="../logo.png">
+    <link rel="shortcut icon" href="./logo.png">
 </head>
 <body>
     <div id="nav">
-        <img src="../logo.png" width="140px" height="140px">
+        <img src="./logo.png" width="140px" height="140px">
         <h1>Sandrine nutrition</h1>
         <div id="nav-link">
             <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="../Recettes/recettes.php">Recettes</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="./index.php">Accueil</a></li>
+                <li><a href="Recettes/recettes.php">Recettes</a></li>
+                <li><a href="Accueil/contact.php">Contact</a></li>
                 <?php if(isset($_SESSION['nom']) && $_SESSION['role'] === 2): ?>
-                    <li><a href="admin.php">Admin</a></li>
+                    <li><a href="Accueil/admin.php">Admin</a></li>
                 <?php endif; ?>
             </ul>
         </div>
         <?php if(!isset($_SESSION['nom'])): ?>
             <div class="connexion">
-                <a href="../Connexion/connexion.php">Connexion</a>
+                <a href="Connexion/connexion.php">Connexion</a>
             </div>
         <?php else: ?>
             <div class="connexion">
-                <a href="../Connexion/connexion.php?logout=1">Déconnexion</a>
+                <a href="Connexion/connexion.php?logout=1">Déconnexion</a>
             </div>
         <?php endif; ?>
             <div id="icons"></div>
@@ -93,11 +94,11 @@ if (isset($_POST['connexion'])) {
     </div>
     <div class="footer">
         <ul>
-            <li><a href="index.php">Acceuil</a></li>
-            <li><a href="../Recettes/recettes.php">Recettes</a></li>
-            <li><a href="contact.php">Contact</a></li>
-            <li><a href="mentionLegale.php">Mentions légales</a></li>
-            <li><a href="confidentialite.php">Politique de confidentialité</a></li>
+            <li><a href="./index.php">Acceuil</a></li>
+            <li><a href="Recettes/recettes.php">Recettes</a></li>
+            <li><a href="Accueil/contact.php">Contact</a></li>
+            <li><a href="Accueil/mentionLegale.php">Mentions légales</a></li>
+            <li><a href="Accueil/confidentialite.php">Politique de confidentialité</a></li>
         </ul>
         <ul>
             <li><a href="#" class="gg-instagram"></a></li>

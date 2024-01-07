@@ -1,6 +1,7 @@
 <?php
-$dsn = 'mysql:host=localhost;dbname=sandrinenutrition';
-$username = 'root';
+$dsn = 'mysql:host=mysql-pinheiro-alwaysdata.net;dbname=pinheiro_sandrinenutrition';
+$username = 'pinheiro';
+$pass = '*3A9C26654911C95BA78BC99B2FBCB9470B2DFD25';
 
 $formImg = $_FILES['image']['name'];
 $tmpImg = $_FILES['image']['tmp_name'];
@@ -8,7 +9,7 @@ $tmpImg = $_FILES['image']['tmp_name'];
 move_uploaded_file($tmpImg, "../images/". $formImg);
 
 try{
-    $pdo = new PDO($dsn, $username);
+    $pdo = new PDO($dsn, $username, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // Données du formulaire
     $formNom = $_POST['nom'];

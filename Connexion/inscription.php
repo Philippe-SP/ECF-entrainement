@@ -13,7 +13,7 @@
         <h1>Sandrine nutrition</h1>
         <div class="nav-link">
             <ul>
-                <li><a href="../Accueil/index.php">Accueil</a></li>
+                <li><a href="../index.php">Accueil</a></li>
                 <li><a href="../Recettes/recettes.php">Recettes</a></li>
                 <li><a href="../Accueil/contact.php">Contact</a></li>
             </ul>
@@ -46,7 +46,7 @@
     </div>
     <div class="footer">
         <ul>
-            <li><a href="../Accueil/index.php">Acceuil</a></li>
+            <li><a href="../index.php">Acceuil</a></li>
             <li><a href="../Recettes/recettes.php">Recettes</a></li>
             <li><a href="../Accueil/contact.php">Contact</a></li>
             <li><a href="../Accueil/mentionLegale.php">Mentions légales</a></li>
