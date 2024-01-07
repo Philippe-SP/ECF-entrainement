@@ -2,9 +2,9 @@
 session_start();
 /*details-recette.php?id=<?php echo $recetteID ?>*/
 
-$dsn = 'mysql:host=mysql-pinheiro-alwaysdata.net;dbname=pinheiro_sandrinenutrition';
-$username = 'root';
-$pass = '*3A9C26654911C95BA78BC99B2FBCB9470B2DFD25';
+$dsn = 'mysql:host=mysql-pinheiro.alwaysdata.net;dbname=pinheiro_sandrinenutrition';
+$username = 'pinheiro_sn';
+$pass = 'Philippe_SN';
 
 //Requette PDO pour l'affichage du detail de la recette
 try {

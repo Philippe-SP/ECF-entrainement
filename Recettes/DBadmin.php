@@ -1,7 +1,7 @@
 <?php
-$dsn = 'mysql:host=mysql-pinheiro-alwaysdata.net;dbname=pinheiro_sandrinenutrition';
-$username = 'pinheiro';
-$pass = '*3A9C26654911C95BA78BC99B2FBCB9470B2DFD25';
+$dsn = 'mysql:host=mysql-pinheiro.alwaysdata.net;dbname=pinheiro_sandrinenutrition';
+$username = 'pinheiro_sn';
+$pass = 'Philippe_SN';
 
 $formImg = $_FILES['image']['name'];
 $tmpImg = $_FILES['image']['tmp_name'];

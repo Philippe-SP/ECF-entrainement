@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-$dsn = 'mysql:host=mysql-pinheiro-alwaysdata.net;dbname=pinheiro_sandrinenutrition';
-$username = 'root';
-$pass = '*3A9C26654911C95BA78BC99B2FBCB9470B2DFD25';
+$dsn = 'mysql:host=mysql-pinheiro.alwaysdata.net;dbname=pinheiro_sandrinenutrition';
+$username = 'pinheiro_sn';
+$pass = 'Philippe_SN';
 
 if (isset($_POST['connexion'])) {
     try{

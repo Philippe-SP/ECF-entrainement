@@ -45,7 +45,8 @@ CREATE TABLE recettes
     ingredients VARCHAR(150),
     etapes VARCHAR(150),
     allergene VARCHAR(150),
-    regime VARCHAR(150)
+    regime VARCHAR(150),
+    image VARCHAR(150)
 );
 
 CREATE TABLE commentaires
